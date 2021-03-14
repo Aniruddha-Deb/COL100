@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[a4paper,left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+
+\newcounter{problem}
+\newcounter{solution}
+
+\newcommand\Problem{%
+  \addtocounter{problem}{1}%
+  \textbf{\alph{problem})}~%
+  \setcounter{solution}{0}%
+}
+
+\newcommand\TheSolution{%
+  \textbf{Solution:}\\%
+}
+
+\newcommand\ASolution{%
+  \stepcounter{solution}%
+  \textbf{Solution \thesolution:}\\%
+}
+
+\title{Number System Conversions \vspace{-0.5cm}}
+\author{Aniruddha Deb}
+\date{\vspace{-1cm}}
+
+\parindent 0in
+\parskip 1em
+\begin{document}
+\maketitle
+
+\Problem $(1001101010)_{2}$ to Decimal
+
+\TheSolution Converting from Binary to Decimal involves multiplying each binary
+digit with it's place value. Place values in binary are in powers of 2, so
+\begin{align*}
+D &= 1 \times 2^{9} + 1 \times 2^6 + 1 \times 2^5 + 1 \times 2^3 + 1 \times 2^1 \\
+\Aboxed{D &= 618}
+\end{align*}
+
+\Problem $(490)_{10}$ to Octal
+
+\TheSolution Dividing by 8 and reading the remainders upwards gives us the Octal
+number
+\begin{center}
+\begin{tabular}{c|c|c}
+8 & 490 & 2 \\
+\hline
+8 & 61 & 5 \\
+\hline
+8 & 7 & 7 \\
+\hline
+ & 0 &
+\end{tabular}
+\end{center}
+
+Hence, $\boxed{(490)_{10} = (752)_8}$
+
+\Problem $(576)_8$ to Hexadecimal
+
+\TheSolution An easy way to convert between two number systems where the place
+values are powers of 2 is to first convert to binary, then group the numbers
+together. This works, because the place values being powers of 2, play along
+nicely.
+\begin{align*}
+(576)_8 &= (\underline{101}\,\underline{111}\,\underline{110})_2 \\
+(\underline{1}\,\underline{0111}\,\underline{1110})_2 &= (17\mathrm{E})_{16}
+\end{align*}
+Hence, $\boxed{(576)_{8} = (17\mathrm{E})_{16}}$
+
+\Problem $(\mathrm{B9C0})_{16}$ to Binary
+
+\TheSolution simple in-place conversion of individual hex digits to binary works,
+since the base (16) is a power of 2.
+\begin{align*}
+\Aboxed{(\mathrm{B9C0})_{16} &= (\underline{1011}\,\underline{1001}\,\underline{1100}\,\underline{0000})_2}
+\end{align*}
+
+\Problem $(6537)_8$ to Binary
+
+\TheSolution proceed similar to the above:
+\begin{align*}
+\Aboxed{(\mathrm{6537})_{8} &= (\underline{110}\,\underline{101}\,\underline{011}\,\underline{111})_2}
+\end{align*}
+
+\pagebreak
+
+\Problem $(445)_{10}$ to Octal
+
+\TheSolution proceed similar to problem \textbf{b}
+\begin{center}
+\begin{tabular}{c|c|c}
+8 & 445 & 5 \\
+\hline
+8 & 55 & 7 \\
+\hline
+8 & 6 & 6 \\
+\hline
+ & 0 &
+\end{tabular}
+\end{center}
+
+Hence, $\boxed{(445)_{10} = (675)_8}$
+
+\Problem $(11001)_2$ to Decimal
+
+\TheSolution proceed similar to problem \textbf{a}
+\begin{align*}
+D &= 1 \times 2^{4} + 1 \times 2^3 + 1 \times 2^0 \\
+\Aboxed{D &= 25}
+\end{align*}
+
+\Problem $\mathrm{(4AD)}_{16}$ to Decimal
+
+\TheSolution This is similar to converting from Binary to Decimal: take the 
+face value of each digit (in base 10) and multiply that with the place value
+of that digit
+\begin{align*}
+D &= 4 \times 16^{2} + 10 \times 16^1 + 13 \times 16^0 \\
+\Aboxed{D &= 1197}
+\end{align*}
+
+\end{document}
+
+
