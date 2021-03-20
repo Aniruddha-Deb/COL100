@@ -1,0 +1,235 @@
+cscope 15 $HOME/Programming/COL100/testing               0000000974
+	@arithmetic.c
+
+1 
+	~<°dio.h
+>
+
+3 
+	$maö
+() {
+
+4 
+a
+ = 10;
+
+5 
+b
+ = 20;
+
+7 
+x
+ = 50+++
+a
+;
+
+8 
+y
+ = 
+a
+++ + ++
+b
+;
+
+9 
+	`¥ötf
+("%d\n", 
+x
+);
+
+10 
+	`¥ötf
+("%d\n", 
+y
+);
+
+12 
+	}
+}
+
+	@gdbtest.c
+
+1 
+	~<°dio.h
+>
+
+3 
+	$maö
+() {
+
+4 
+x
+ = 5;
+
+5 
+y
+ = 12;
+
+6 
+z
+ = 
+x
++
+y
+;
+
+7 
+	`¥ötf
+("%d\n", 
+z
+);
+
+9 
+	}
+}
+
+	@numtests.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<Êﬂt.h
+>
+
+4 
+	$maö
+() {
+
+5 
+	`¥ötf
+("%f\n", 
+DBL_MIN
+);
+
+6 
+x
+;
+
+7 
+	`sˇnf
+("%d", &
+x
+);
+
+8 
+	`¥ötf
+("%d\n", 
+x
+);
+
+10 
+	}
+}
+
+	@time.c
+
+1 
+	~<time.h
+>
+
+2 
+	~<°dio.h
+>
+
+4 
+	#TICK
+(
+X
+Ë
+˛ock_t
+ X = 
+	`˛ock
+()
+
+	)
+
+5 
+	#TOCK
+(
+X
+Ë
+	`¥ötf
+("timê%s: %g sec.\n", (#X), ()(
+	`˛ock
+(Ë- (X)Ë/ 
+CLOCKS_PER_SEC
+)
+
+	)
+
+7 
+	$maö
+() {
+
+8 
+a
+ = 10;
+
+9 
+b
+ = 5;
+
+11 
+	`TICK
+(
+TIME_INT
+);
+
+12 
+c
+ = 
+a
++
+b
+;
+
+13 
+	`TOCK
+(
+TIME_INT
+);
+
+15 
+x
+ = 5.1342;
+
+16 
+y
+ = 10.3489;
+
+17 
+	`TICK
+(
+TIME_FLOAT
+);
+
+18 
+z
+ = 
+x
++
+y
+;
+
+19 
+	`TOCK
+(
+TIME_FLOAT
+);
+
+22 
+	}
+}
+
+	@
+1
+.
+0
+4
+41
+arithmetic.c
+gdbtest.c
+numtests.c
+time.c
