@@ -9,7 +9,8 @@ int main() {
 
 	// there are more efficient ways of doing this, using some factorization
 	// and euler's totient function, but I've refrained from implmenting 
-	// that here. Time complexity of this is O(n^2log(n))
+	// that here because a,b <= 1000 is a mangeable bound. Time complexity of 
+	// this is O(n^2log(n))
 
 	long n = 0;
 	for (int i=a; i<=b; i++) {
