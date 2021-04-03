@@ -1,0 +1,25 @@
+1) 
+Infinite loop
+
+Reason: in the initial iteration, var would go up to 255 and print all the 
+integers up to 255, separated by space like 1 2 3 ... 255. However, after 
+this, var++ would set var to 256, which is not possible since the size of 
+an unsigned char is 8 bits (it can store 2^8 = 256 values, from 0 to 255). 
+Hence, var overflows and returns back to 0, giving us an infinite loop
+
+2)
+#0#1#2#3#4#5#6###
+
+Reason: this is a simple program showing the use of continue; continue would
+skip over the remaining statements of the loop and would go back to incrementing
+tally by 1, and hence not printing the value of tally.
+
+3)
+A B C D E
+A B C D
+A B C
+A B
+A
+
+Reason: this is an inverted half pyramid, and we're printing the jth character
+after A at every iteration of the inner loop
