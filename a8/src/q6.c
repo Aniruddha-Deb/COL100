@@ -30,8 +30,7 @@ void decrypt(char str[], int k) {
 int main() {
 	
 	char s[100];
-	fgets(s, 100, stdin);
-	s[strlen(s)-1] = '\0';
+	scanf("%99[^\n]s", s);
 	int n;
 	scanf("%d", &n);
 

@@ -2,10 +2,13 @@
 #include <stdbool.h>
 
 bool isSorted(int A[], int n) {
-	for (int i=0; i<n-1; i++) {
-		if (A[i] > A[i+1]) return false;
+	bool sortAsc = true;
+	bool sortDesc = true;
+	for (int i=0; i<n; i++) {
+		if (i < n-1 && A[i] > A[i+1]) sortAsc = false;
+		if (i > 0 && A[i] > A[i-1]) sortDesc = false;
 	}
-	return true;
+	return sortAsc || sortDesc;
 }
 
 int main() {

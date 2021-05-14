@@ -17,11 +17,9 @@ char* toLowerCase(char *s) {
 int main() {
 	
 	char s[100];
-	// fgets is safer, as scanf can cause an overflow if a string > 100 characters
-	// long is entered
-	fgets(s, 100, stdin);
+	scanf("%99[^\n]s",s);
 
-	printf("%s", toLowerCase(s));
+	printf("%s\n", toLowerCase(s));
 
 	return 0;
 }

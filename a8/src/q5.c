@@ -17,7 +17,7 @@ bool isPangram(char *s) {
 int main() {
 	
 	char s[100];
-	fgets(s, 100, stdin);
+	scanf("%99[^\n]s",s);
 
 	printf(isPangram(s) ? "true\n" : "false\n");
 

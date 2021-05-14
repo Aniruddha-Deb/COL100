@@ -34,14 +34,11 @@ int isSubstring(char *s1, char *s2) {
 int main() {
 	
 	char s[100];
-	fgets(s, 100, stdin);
+	scanf("%99[^\n]s",s);
+	fflush(stdin); // the \n will still be in stdin, causing w to be empty
+	// to prevent this, flush the input stream.
 	char w[100];
-	fgets(w, 100, stdin);
-
-	// note fgets also reads a newline character, so we'll chop the last character
-	// off the string.
-	s[strlen(s)-1] = '\0';
-	w[strlen(w)-1] = '\0';
+	scanf("%99[^\n]s",w);
 
 	toLowerCase(s);
 	toLowerCase(w);
