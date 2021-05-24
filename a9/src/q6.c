@@ -5,6 +5,7 @@
 
 int myatoi(char A[], int l) {
 	if (l == 0) return 0;
+	if (A[0] == '-') return -1*myatoi(A+1,l-1);
 	int num = A[0]-'0';
 	return num*((int)pow(10,l-1)) + myatoi(A+1,l-1);
 }
@@ -17,6 +18,9 @@ int main() {
 	char s[100];
 	scanf("%99[^\n]s", s);
 	for (int i=0; i<l; i++) {
+		if (i==0 && s[i] == '-') {
+			continue;
+		}
 		if (s[i] < '0' || s[i] > '9') {
 			printf("Invalid string\n");
 			return 0;

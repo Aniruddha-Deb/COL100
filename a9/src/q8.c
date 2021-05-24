@@ -115,6 +115,12 @@ int main() {
 		}
 	}
 
+	double determinant = det(mat, n);
+	if (determinant == 0) {
+		printf("Inverse does not exist\n");
+		free_sq_mat(mat,n);
+		return 0;
+	}
 	double **inverse = inv(mat, n);
 	print_mat(inverse, n);
 	free_sq_mat(inverse,n);
