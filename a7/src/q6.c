@@ -17,7 +17,10 @@ int main() {
 		sl = temp;
 	}
 	for (int i=2; i<n; i++) {
-		if (A[i] < l) l = A[i];
+		if (A[i] < l) {
+			sl = l;
+			l = A[i];
+		}
 		if (A[i] > l && A[i] < sl) sl = A[i];
 	}
 

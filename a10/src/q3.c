@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-/*
-* Analysis:
-*
-* TODO
-*/
 int binsearch(int *A, int n, int s) {
 
 	if (n == 1 && A[0] != s) return -1;
