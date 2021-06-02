@@ -15,7 +15,7 @@ int main() {
 		for (int j=i; j<n; j++) {
 			int sum = 0;
 			for (int k=i; k<=j; k++) {
-				sum += A[i];
+				sum += A[k];
 			}
 			if (sum == 0) {
 				exists = true;

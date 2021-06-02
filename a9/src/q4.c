@@ -2,15 +2,14 @@
 #include <stdbool.h>
 #include <string.h>
 
-int main() {
-	
-	char A[100];
+char* possiblePal(char str[]) {
+
 	int freq[26];
 	memset(freq, 0, sizeof(freq));
-	scanf("%99[^\n]s", A);
-	int n = strlen(A);
+	int n = strlen(str);
+
 	for (int i=0; i<n; i++) {
-		freq[A[i]-'a']++;
+		freq[str[i]-'a']++;
 	}
 	bool odd_enc = false;
 	bool possible = true;
@@ -31,7 +30,15 @@ int main() {
 		}
 	}
 
-	printf(possible?"YES\n":"NO\n");
+	return possible ? "YES" : "NO";
+}
+
+int main() {
+	
+	char A[100];
+	scanf("%99[^\n]s", A);
+
+	printf("%s\n", possiblePal(A));
 
 	return 0;
 }
